@@ -117,7 +117,7 @@ body {
 .external-login span,
 .external-login i {
     font-weight: bold;
-    color: var(--mars-light);
+    color: var(--yellow);
 }
 
 .login-line {
