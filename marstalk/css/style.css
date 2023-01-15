@@ -94,6 +94,7 @@ body {
     height: 200px;
     width: 90%;
     position: fixed;
+    bottom: 12%;
 }
 
 .chat-window {
