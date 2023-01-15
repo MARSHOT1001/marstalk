@@ -7,6 +7,8 @@
 
 @import "screens/device.css";
 @import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/chats.css";
 
 @import "reset.css";
 @import "variables.css";
@@ -21,85 +23,223 @@ body {
     height: 100vh;
     width: 100%;
     background-color: wheat;
-    overflow-x: hidden;
 }
 
-#friends-screen {
-    padding: 650px 0px 150px 0px;
-}
-
-.division {
+.mstk-msg {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.chat-msg {
+    display: flex;
     align-items: center;
-    margin-top: 15px;
-    padding: 0px 70px 0px 20px;
+    height: 80px;
+    width: 100%;
+    opacity: 0;
+    animation: message 1s forwards;
 }
 
-.division__icon {
-    margin-top: 2px;
+.chat-msg img {
+    height: 60px;
+    width: 60px;
+    border-radius: 40%;
 }
 
-.division__text,
-.division__icon {
-    color: rgba(87, 65, 52, 0.6);
-    font-size: 14px;
+.msg__content {
+    margin-left: 10px;
+}
+
+.msg__author {
+    color: var(--mars-dark);
     font-weight: bold;
 }
 
-.friends-component {
-    width: 90%;
-    margin-left: 20px;
-}
-
-.friends-component img,
-.scroll-component img {
-    height: 70px;
-    width: 70px;
-}
-
-.scroll-component {
+.msg__info {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 150px;
-    width: 90%;
-    margin: 20px 20px 20px 40px;
-    overflow: auto;
-    white-space: nowrap;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    align-items: flex-end;
 }
 
-.scroll-component__container {
+.msg__bubble {
+    display: flex;
+    padding: 12px;
+    background-color: var(--mars-dark);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-top: 6px;
+}
+
+.msg__time {
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(205, 129, 68, 0.8);
+    margin-left: 4px;
+}
+
+.my-msg {
+    justify-content: flex-end;
+}
+
+.msg__status {
+    color: var(--pink);
+    font-size: 15px;
+    margin-right: 2px;
+    font-weight: bold;
+}
+
+.keyboard {
+    height: 200px;
+    width: 90%;
+    position: fixed;
+}
+
+.chat-window {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.chat__plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+}
+
+.chat__hash {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+}
+
+.chat__hash i {
+    margin-right: 5px;
+}
+
+.chat-window__chat {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    cursor: text;
+}
+
+.chat__bar {
+    height: 23px;
+    width: 3px;
+    margin: 2px 0px 0px 3px;
+    background-color: var(--mars-normal);
+    animation: flicker 0.7s infinite;
+}
+
+.keyboard__keys {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-.scroll-component__container h4 {
-    margin: 4px 1px 0px 0px;
-}
-
-.scroll-component::-webkit-scrollbar {
-    background-color: wheat;
-}
-
-.scroll-component::-webkit-scrollbar-thumb {
+    height: 240px;
+    width: 100%;
+    padding: 10px;
     background-color: var(--mars-dark);
+}
+
+.keyboard__column {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.keyboard__column i {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.keyboard__column i:first-child {
+    color: var(--mars-dark);
+}
+
+.keyboard__column--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    margin: 2px;
+    color: white;
+    background-color: var(--mars-light);
     border-radius: 10px;
+    cursor: pointer;
 }
 
-.scroll-component__container {
-    margin-right: 50px;
+.keyboard__column--item:hover {
+    animation: keyboard 0.1s forwards;
 }
 
-.updated-notification {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: tomato;
-    position: relative;
-    right: 25px;
+.keys__fourth {
+    width: 100%;
+}
 
+.keys__space {
+    width: 3000px;
+    border-radius: 5px;
+}
+
+.chat-leftMessage:hover {
+    animation: leftMessage 1s forwards;
+}
+
+.msg__bubble span {
+    display: block;
+}
+
+.my-msg .msg__bubble {
+    background-color: var(--mars-light);
+}
+
+.chat-msg:nth-child(1) {
+    animation-delay: 500ms;
+}
+
+.chat-msg:nth-child(2) {
+    animation-delay: 1000ms;
+}
+
+.chat-msg:nth-child(3) {
+    animation-delay: 1500ms;
+}
+
+.chat-msg:nth-child(4) {
+    animation-delay: 2000ms;
+}
+
+.chat-msg:nth-child(5) {
+    animation-delay: 2500ms;
+}
+
+.chat-msg:nth-child(6) {
+    animation-delay: 3000ms;
+}
+
+.chat-msg:nth-child(7) {
+    animation-delay: 3500ms;
+}
+
+.chat-msg:nth-child(8) {
+    animation-delay: 4000ms;
+}
+
+
+.msg__more {
+    margin: 20px 0px 0px 70px;
 }

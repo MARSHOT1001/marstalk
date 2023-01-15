@@ -60,3 +60,11 @@
     margin-left: 10px;
     color: #317743;
 }
+
+.user-component__birthday {
+    display: flex;
+}
+
+.user-component__birthday i {
+    margin-left: 10px;
+}

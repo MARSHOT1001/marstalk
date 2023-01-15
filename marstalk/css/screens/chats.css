@@ -1,0 +1,25 @@
+#chats-screen {
+    padding: 100px 40px;
+}
+
+.user-component__chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-component__chat span {
+    opacity: 0.6;
+}
+
+.chat-notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-color: tomato;
+    color: white;
+    margin-bottom: 10px;
+}
