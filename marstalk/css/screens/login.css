@@ -1,0 +1,113 @@
+.welcome-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 145px;
+}
+
+.welcome-header__title {
+    color: var(--mars-dark);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.welcome-header__content {
+    color: var(--mars-light);
+    font-weight: 500;
+    width: 60%;
+    margin: 30px 0px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+#login-form input,
+#login-form button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 12px;
+    background-color: wheat;
+    border: none;
+    border-bottom: 2px solid rgba(205, 129, 68, 0.2);
+}
+
+#login-form input {
+    transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input:focus {
+    border-color: rgba(87, 65, 52, 0.4);
+}
+
+#login-form input::placeholder,
+#login-form input[type="submit"],
+#login-form button {
+    color: var(--yellow);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#login-form input::placeholder {
+    color: var(--mars-light);
+}
+
+#login-form input[type="submit"],
+#login-form button {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--mars-dark);
+}
+
+#login-form button {
+    flex-direction: row;
+}
+
+#login-form button i {
+    margin-right: 10px;
+}
+
+.login-path {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+#login-form div a {
+    text-decoration: underline;
+    color: var(--mars-light);
+}
+
+.external-login {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0px;
+}
+
+.external-login span,
+.external-login i {
+    font-weight: bold;
+    color: var(--yellow);
+}
+
+.login-line {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.login-line hr {
+    background-color: var(--mars-dark);
+    height: 2px;
+    width: 400px;
+    border: none;
+}
