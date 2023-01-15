@@ -25,7 +25,7 @@ body {
 }
 
 #friends-screen {
-    padding: 200px 0px 150px 0px;
+    padding: 650px 0px 150px 0px;
 }
 
 .division {
@@ -52,17 +52,33 @@ body {
     margin-left: 20px;
 }
 
+.friends-component img,
+.scroll-component img {
+    height: 70px;
+    width: 70px;
+}
+
 .scroll-component {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 150px;
     width: 90%;
-    margin: 20px;
+    margin: 20px 20px 20px 40px;
     overflow: auto;
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+.scroll-component__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-component__container h4 {
+    margin: 4px 1px 0px 0px;
 }
 
 .scroll-component::-webkit-scrollbar {
@@ -76,4 +92,14 @@ body {
 
 .scroll-component__container {
     margin-right: 50px;
+}
+
+.updated-notification {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: tomato;
+    position: relative;
+    right: 25px;
+
 }
