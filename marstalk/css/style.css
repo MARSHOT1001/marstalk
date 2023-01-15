@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans&display=swap');
+
+@import "components/device.css";
+
+@import "screens/device.css";
+
+@import "reset.css";
+@import "variables.css";
+@import "animation.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: wheat;
+}
+
+.welcome-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 145px;
+}
+
+.welcome-header__title {
+    color: var(--mars-dark);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.welcome-header__content {
+    color: var(--mars-light);
+    font-weight: 500;
+    width: 60%;
+    margin: 30px 0px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
