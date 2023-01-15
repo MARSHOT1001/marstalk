@@ -1,0 +1,44 @@
+@keyframes btnClick {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+        background-color: rgba(128, 128, 128, 0.2);
+    }
+}
+
+@keyframes rotateIcon {
+    from {
+        transform: rotateX(0);
+    }
+    to {
+        transform: rotate(720);
+    }
+}
+
+@keyframes flicker {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes keyboard {
+    from {}
+    to {
+        transform: scale(1.5);
+        z-index: 1;
+    }
+}
+
+@keyframes message {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,73 @@
+.status_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.status_bar__column img {
+    height: 22px;
+    width: 22px;
+}
+
+.status_bar__camera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    margin-left: 20px;;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.status_bar__lens {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--black-light);
+}
+
+.status_bar span,
+.status_bar i {
+    color: var(--mars-dark);
+}
+
+.device_nav {
+    display: flex;
+    justify-content: space-around;
+    height: 5%;
+    width: 100%;
+    background-color: wheat;
+    position:fixed;
+    right: 1%;
+    bottom: -1%;
+}
+
+.device_nav__column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 33%;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #C9C7DA;
+}
+
+.device_nav__hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    color: #C9C7DA;
+}
+
+.device_nav__hover:hover {
+    animation: btnClick 0.5s ease-out;
+}
